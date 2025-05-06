@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     # Add Django Filter
     'django_filters',
+    # Add Services App
+    'our_service.apps.OurServiceConfig',
     # Cors Headers
     'corsheaders',
     'django.contrib.admin',
