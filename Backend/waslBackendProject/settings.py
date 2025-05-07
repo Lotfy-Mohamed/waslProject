@@ -176,18 +176,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_URL = 'backend/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     # Ensure this points to the directory with your custom static files (if any)
-    BASE_DIR / "backend/static",
+    BASE_DIR / "static",
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-MEDIA_URL = 'backend/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
-FORCE_SCRIPT_NAME = '/backend'
-# 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -221,7 +219,7 @@ CSRF_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = 'Lax'  # or 'Strict' for stricter enforcement
 CSRF_TRUSTED_ORIGINS = [
     'https://lmboost.com',  # Add your production URL here
-    'https://lmboost.com/backend',  # Add your production URL here
+    'https://lmboost.com',  # Add your production URL here
     'http://127.0.0.1',  # Local development URL
     'http://localhost',  # Local development URL
 ]
