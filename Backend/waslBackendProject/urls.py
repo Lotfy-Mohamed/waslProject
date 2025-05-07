@@ -21,14 +21,14 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('backend/admin/', admin.site.urls),
-    path('backend/api/auth/', include('auth_flow.urls')),
-    path('backend/api/home/', include('home_app.urls')),
-    path('backend/api/contact-us/', include('contact_us.urls')),
-    path('backend/api/packages/', include('packages.urls')),
-    path('backend/api/about-us/', include('about_us.urls')),
-    path('backend/api/blog/', include('blog.urls')),
-    path('backend/api/services/', include('our_service.urls')),
+    path('admin/', admin.site.urls),
+    path('api/auth/', include('auth_flow.urls')),
+    path('api/home/', include('home_app.urls')),
+    path('api/contact-us/', include('contact_us.urls')),
+    path('api/packages/', include('packages.urls')),
+    path('api/about-us/', include('about_us.urls')),
+    path('api/blog/', include('blog.urls')),
+    path('api/services/', include('our_service.urls')),
 ]
 
 # Add this line to the end of the file
