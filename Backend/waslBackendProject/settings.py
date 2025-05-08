@@ -175,15 +175,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
+
+FORCE_SCRIPT_NAME = '/backend'
+
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_URL = 'static/'
+STATIC_URL = '/backend/static/'
 STATICFILES_DIRS = [
     # Ensure this points to the directory with your custom static files (if any)
     BASE_DIR / "static",
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/backend/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
 
